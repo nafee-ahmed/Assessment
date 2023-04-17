@@ -1,10 +1,8 @@
 ## How to run?
 
-* Install docker.
+* Install docker. Make sure docker is running.
 
 * Go the root project directory of the application.
-
-* Make sure docker is running.
 
 * Run `docker-compose up` to install and run the application with all its dependencies. 
 
