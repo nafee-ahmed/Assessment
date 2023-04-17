@@ -1,5 +1,7 @@
 import { AuthActions, AuthState } from "../models/AuthContextTypes";
 
+// This is the reducer for AuthContext
+// and updates states for AUthContext accordingly
 export const AuthReducer = (state: AuthState, action: AuthActions) => {
   switch (action.type) {
     case "AUTH_START":

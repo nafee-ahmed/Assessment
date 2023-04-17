@@ -10,7 +10,7 @@ interface Props {
   onBlur?: (e: any) => void;
   isRequired: boolean;
 }
-
+// This component is reused for every input on the app.
 const InputField: React.FC<Props> = ({
   label,
   id,

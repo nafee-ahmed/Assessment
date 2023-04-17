@@ -8,12 +8,15 @@ import { ConfigModule } from '@nestjs/config';
 import { ClubsModule } from './clubs/clubs.module';
 import { Clubs } from './clubs/entity/clubs.entity';
 
+// this has the db configurations
+// If you run with docker compose, use "db" as host,
+// but if you want to run without docker, use "127.0.0.1" as host
 @Module({
   imports: [
     UserModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
-      host: "db", // '127.0.0.1'
+      host: 'db', // '127.0.0.1' // "db"
       port: 3306,
       username: 'root',
       password: 'password',

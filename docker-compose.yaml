@@ -42,7 +42,7 @@ services:
     depends_on:
       - backend
     volumes:
-      - ./frontend/src:/app/src
+      - ./frontend:/app
       - /app/node_modules
       - /app/.next
     networks:

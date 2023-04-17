@@ -6,11 +6,13 @@ import AuthButton from "./components/AuthButton";
 import InputField from "./components/InputField";
 import { useAuth } from "./hooks/useAuth";
 
+// This page corresponds to the page of url: "/"
 const LoginPage: React.FC = () => {
   const [loginCredentials, setLoginCredentials] = useState({
     email: "",
     password: "",
   });
+  // useAuth is a custom hook that separates all the auth related into it.
   const { loginHandler, error, loading } = useAuth();
 
   return (

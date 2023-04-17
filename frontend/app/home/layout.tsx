@@ -16,6 +16,9 @@ const NavbarLayout: React.FC<Props> = ({ children }) => {
   const { user } = useAuth();
   const { authDispatch } = useContext(AuthContext);
 
+  // This function just redirects user to the login page whenever the user reloads with
+  // an expired token
+  // The token expires after 60s for added security
   async function fetchUser() {
     const token = localStorage.getItem("user");
     if (token) {
@@ -44,6 +47,8 @@ const NavbarLayout: React.FC<Props> = ({ children }) => {
     fetchUser();
   }, []);
 
+  // The layout page in here has the navbars so all the children pages
+  // from this path inherits the navbar.
   return (
     <div>
       <TopNavbar />

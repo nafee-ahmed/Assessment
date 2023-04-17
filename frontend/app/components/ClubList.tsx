@@ -1,7 +1,7 @@
 import React, { Suspense, useEffect, useState } from "react";
 import useFetch from "../hooks/useFetch";
 import { Club } from "../models/ApiTypes";
-import { isArrayOfClubs } from "../utils/isArrayOfClubs";
+import { isArrayOfClubs } from "../models/isArrayOfClubs";
 import ClubItem from "./ClubItem";
 import SkeletonList from "./SkeletonList";
 import Spinner from "./Spinner";
@@ -9,7 +9,8 @@ import Spinner from "./Spinner";
 interface Props {
   url: string;
 }
-
+// This ClubList is also reused by the 2 pages that renders the club list for applied clubs
+// and for clubs that have not been applied to.
 const ClubList: React.FC<Props> = ({ url }) => {
   const { data, error, loading } = useFetch(url);
   const [clubs, setClubs] = useState<Club[]>([]);

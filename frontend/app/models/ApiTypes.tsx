@@ -1,3 +1,4 @@
+// The types of axios are here
 export interface SucessAuthMessage {
   access_token: string;
   name: string;

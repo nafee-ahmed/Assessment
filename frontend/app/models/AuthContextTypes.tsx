@@ -1,3 +1,4 @@
+// This has all the types used by the AuthContext and the AuthReducer. 
 export interface AuthState {
   user: string | null;
   loading: boolean;

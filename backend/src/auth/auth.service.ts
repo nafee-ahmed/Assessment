@@ -20,6 +20,8 @@ export class AuthService {
     return null;
   }
 
+  // sending the token for sign up and login, which is then used by the frontend 
+  // to authenticate themselves after consecutive requests.
   async login(user: any) {
     const payload = { email: user.email, sub: user.id };
     return {

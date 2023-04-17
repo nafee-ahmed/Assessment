@@ -11,7 +11,9 @@ import { LocalStrategy } from './local.strategy';
 
 @Module({
   imports: [
-    // both modules depend on each other
+    // congiModule is for environment variables
+    // both modules depend on each other, so using forwardRef for 
+    // circular dependency
     forwardRef(() => UserModule),
     PassportModule,
     ConfigModule.forRoot({

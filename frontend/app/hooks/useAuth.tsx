@@ -6,6 +6,9 @@ import { AuthContext } from "../contexts/AuthContext";
 import { SucessAuthMessage } from "../models/ApiTypes";
 import { backendLink } from "../utils/constants";
 
+// useAuth communicates with the nestjs backend and updates its states from AuthContext
+// AuthContext uses React's Context Api + reducer. 
+// The provider is in the root layout 
 export const useAuth = () => {
   const router = useRouter();
 

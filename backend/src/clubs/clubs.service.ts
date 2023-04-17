@@ -5,6 +5,8 @@ import { UserService } from 'src/user/user.service';
 import { Repository } from 'typeorm';
 import { Clubs } from './entity/clubs.entity';
 
+// has all the logic for crud of clubs
+// importing to repositories user and clubs
 @Injectable()
 export class ClubsService {
   constructor(

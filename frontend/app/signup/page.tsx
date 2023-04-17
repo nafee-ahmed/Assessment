@@ -6,7 +6,14 @@ import AuthButton from "../components/AuthButton";
 import InputField from "../components/InputField";
 import { useAuth } from "../hooks/useAuth";
 import { signupSchema } from "../schemas";
+import Loading from "./loading";
 
+// IValues corresponds to formik's form's input types.
+// Formik is used to do frontend custom validation
+// Backend validation is also done.
+// For both frontend and backend validation, the error messages are shown on the page.
+// Yup is used for the schema of frontend validation, signupSchema
+// and formik takes care of the ui and displaying of error messages for it.
 interface IValues {
   email: string;
   name: string;
@@ -14,6 +21,7 @@ interface IValues {
 }
 
 const SignupPage: React.FC = () => {
+  // useAuth is a custom hook has all logic for auth, and separates the logic
   const { signupHandler, error } = useAuth();
   const {
     values,
@@ -90,9 +98,7 @@ const SignupPage: React.FC = () => {
             {errors.password && touched.password && (
               <p className="text-red-500 text-xs italic">{errors.password}</p>
             )}
-            {error && (
-              <p className="text-red-500 text-xs italic">{error}</p>
-            )}
+            {error && <p className="text-red-500 text-xs italic">{error}</p>}
           </div>
           <p className="text-sm font-light text-gray-500 dark:text-gray-400">
             Already have an account?{" "}

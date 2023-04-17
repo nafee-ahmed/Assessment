@@ -5,6 +5,8 @@ import { useAuth } from "../hooks/useAuth";
 import MovingNavbar from "./MovingNavbar";
 
 const TopNavbar: React.FC = () => {
+  // Here, useAuth is reused again, and the logic is separated by useAuth
+  // to have cleaner code. 
   const { logout } = useAuth();
   return (
     <nav className="min-w-screen">

@@ -4,6 +4,10 @@ import React, { useState } from "react";
 import { BsTypeH1 } from "react-icons/bs";
 import { backendLink } from "../utils/constants";
 
+// This is the page corresponding to url: "/populate"
+// This is a page used just for populating the database with clubs
+// and was not asked for by the assessment.
+// This page is solely made so that it is easier to have the app going. 
 const PopulatePage = () => {
   const [loading, setLoading] = useState(false);
   const [done, setDone] = useState(false);

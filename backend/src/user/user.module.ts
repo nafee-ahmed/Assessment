@@ -10,7 +10,7 @@ import { UserService } from './user.service';
 @Module({
   controllers: [UserController],
   providers: [UserService, CustomEmailvalidation],
-  // both modules depend on each other
+  // both modules depend on each other, so using forwardRef for circular dependency
   imports: [TypeOrmModule.forFeature([User]), forwardRef(() => AuthModule)],
   exports: [UserService],
 })

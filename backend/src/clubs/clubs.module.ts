@@ -6,6 +6,7 @@ import { ClubsController } from './clubs.controller';
 import { ClubsService } from './clubs.service';
 import { Clubs } from './entity/clubs.entity';
 
+// TypeOrm.forFeature import makes it so user and clubs can be used on club service
 @Module({
   controllers: [ClubsController],
   providers: [ClubsService],

@@ -1,7 +1,7 @@
-import { Club } from "../models/ApiTypes";
+import { Club } from "./ApiTypes";
 
-
-
+// This type guard checks for the clubs on the 2 list pages, where user is redirected to after the user
+// is authenticated.
 export function isArrayOfClubs(arr: unknown): arr is Club[] {
   if (!Array.isArray(arr)) {
     return false;

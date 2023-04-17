@@ -8,6 +8,7 @@ import axios from "axios";
 import { backendLink } from "../utils/constants";
 import { useRouter } from "next/navigation";
 
+// This component is reused through the 2 pages, to render in the details of the selected club
 interface Props {
   about: string;
   contact: string;

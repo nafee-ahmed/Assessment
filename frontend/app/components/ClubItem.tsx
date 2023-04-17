@@ -9,7 +9,7 @@ import { Club } from "../models/ApiTypes";
 interface Props {
     club: Club
 }
-
+// This component is also reused on the 2 pages that has the list, for each item on the list.
 const ClubItem: React.FC<Props> = ({ club }) => { 
   return (
     <div>

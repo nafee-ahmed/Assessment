@@ -3,6 +3,8 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import {  backendLink } from "../utils/constants";
 
+// useFetch is a custom hook used for fetching data
+// This hook is reused every time data is fetched such as to render the list of clubs
 const useFetch = (url: string) => {
   const [data, setData] = useState<unknown>(undefined);
   const [loading, setLoading] = useState(false);

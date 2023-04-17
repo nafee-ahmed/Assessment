@@ -3,6 +3,7 @@ import { NestFactory } from '@nestjs/core';
 import { useContainer } from 'class-validator';
 import { AppModule } from './app.module';
 
+// the entry point to the app
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {cors: true});
   // whitelist so that extra params cannot be passed to body

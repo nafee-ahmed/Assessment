@@ -22,6 +22,9 @@ const studentNavItems: NavItem[] = [
 ];
 
 const MovingNavbar = () => {
+  // useSelectedLayoutSegment is a client component hook that lets me read the active route 
+  // segment one level below the layout it is called from
+  // Here, it has been used to apply styles to the navbar item that is currently active
   const segment = useSelectedLayoutSegment();
 
   return (

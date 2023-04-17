@@ -3,11 +3,13 @@ import ClubDetails from "@/app/components/ClubDetails";
 import SkeletonList from "@/app/components/SkeletonList";
 import { AuthContext } from "@/app/contexts/AuthContext";
 import useFetch from "@/app/hooks/useFetch";
-import isClubDetail, { ClubDetail } from "@/app/utils/isClubDetail";
+import isClubDetail, { ClubDetail } from "@/app/models/isClubDetail";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 import React, { useContext, useEffect, useState } from "react";
 
+// This page corresponds to the url: "/home/{clubId}"
+// to render the details of the selected club
 const ClubDetailsPage = () => {
   const params = useParams();
   const clubId = parseInt(params.id);
@@ -21,6 +23,7 @@ const ClubDetailsPage = () => {
     title: "",
     id: 0,
   });
+  // reusing useFetch custom hook to fetch the details.
   const { data, error, loading } = useFetch(`/clubs/${clubId}`);
   useEffect(() => {
     console.log(data);
