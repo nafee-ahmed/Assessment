@@ -12,7 +12,7 @@ import { AuthContext } from "../contexts/AuthContext";
 const HomePage = () => {
   const { id } = useContext(AuthContext);
   return !id ? (
-    <div>
+    <div className="w-full">
       <SkeletonList />
     </div>
   ) : (

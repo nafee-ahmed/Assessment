@@ -91,7 +91,7 @@ const clubDetails: React.FC<Props> = ({
           ) : (
             <>
               <FaBriefcase size={"1.25rem"} />
-              <span className="pl-2">Apply</span>
+              <span className="pl-2">{isDone ? "Applied" : "Apply"}</span>
             </>
           )}
         </button>

@@ -4,7 +4,7 @@ const SkeletonList = () => {
   return (
     <div
       role="status"
-      className=" max-w-md p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow animate-pulse"
+      className=" w-full p-4 space-y-4 border border-gray-200 divide-y divide-gray-200 rounded shadow animate-pulse"
     >
       <div className="flex items-center justify-between">
         <div>

@@ -26,12 +26,11 @@ const ClubDetailsPage = () => {
     console.log(data);
     if (data && isClubDetail(data)) setClub(data);
     else console.log("not being converted to club detail");
-    
   }, [data]);
   return (
-    <div className="w-full">
+    <div>
       {loading ? (
-        <div>
+        <div className="w-full ">
           <SkeletonList />
         </div>
       ) : (
@@ -43,7 +42,7 @@ const ClubDetailsPage = () => {
           hasApplied={club.hasApplied}
           id={club.id}
           pasActiveMembers={club.pastActiveMembers}
-            title={club.title}
+          title={club.title}
         />
       )}
     </div>
@@ -51,12 +50,3 @@ const ClubDetailsPage = () => {
 };
 
 export default ClubDetailsPage;
-
-// about,
-//   contact,
-//   contactName,
-//   fee,
-//   hasApplied,
-//   id,
-//   pasActiveMembers,
-//   title,
