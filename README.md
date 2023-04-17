@@ -2,6 +2,8 @@
 
 * Install docker.
 
+* Go the root project directory of the application.
+
 * Run `docker-compose up` to install and run the application with all its dependencies. 
 
 * Go to `http://localhost:3000/populate` on your browser and click on "Populate DB" to generate the data onto MySQL, and it will show "Done!".
